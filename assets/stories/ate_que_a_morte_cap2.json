@@ -1,0 +1,76 @@
+{
+  "nodes": {
+    "node_ch2_start": {
+      "id": "node_ch2_start",
+      "text": "A neblina da madrugada ainda cobre a Avenida Faria Lima quando você entra no edifício corporativo da Lumen Design. O distintivo provisório da polícia no seu bolso pesa como chumbo. O ambiente está silencioso, iluminado apenas pelo brilho frio dos monitores e pelas luzes de emergência.\n\nMarcos já está lá. Ele aguarda-o na sala de reuniões principal, cruzando os braços com uma expressão que oscila entre a irritação calculada e a falsa solidariedade. Sobre a mesa de vidro, os relatórios financeiros escancaram o rombo de oitenta e cinco mil reais que Helena desviou nas vésperas da auditoria.",
+      "choices": [
+        {
+          "id": "choice_ch2_confront_marcos",
+          "label": "Confrontar Marcos diretamente sobre a transferência Pix e exigir saber qual era o seu envolvimento com Helena.",
+          "nextNodeId": "node_ch2_marcos_office",
+          "statChanges": {
+            "trust": -5,
+            "heat": 10
+          }
+        },
+        {
+          "id": "choice_ch2_cooperate_marcos",
+          "label": "Tentar manter a calma, fingir cooperação e sondar Marcos sobre os segredos de Helena na agência.",
+          "nextNodeId": "node_ch2_marcos_office",
+          "statChanges": {
+            "trust": 0,
+            "heat": -5
+          },
+          "addEvidence": [
+            "relatorio_financeiro_lumen"
+          ]
+        }
+      ]
+    },
+    "node_ch2_marcos_office": {
+      "id": "node_ch2_marcos_office",
+      "text": "Marcos sorri de canto, um sorriso sem nenhum calor humano. Ele recosta-se na cadeira de couro e cruza os dedos.\n\n— Tu achavas que conhecias a Helena, não achavas? — a voz dele soa cortante, quase venenosa. — A tua preciosa Helena não passava de uma chantagista. Ela descobriu contratos públicos irregulares e estava a extorquir metade dos nossos clientes principais. E o Daniel... bem, o Daniel precisava de dinheiro para cobrir as dívidas de jogo dele. Pede para ver o cofre particular dela se tens coragem.\n\nAs palavras de Marcos atingem-no como um golpe físico.",
+      "choices": [
+        {
+          "id": "choice_ch2_search_safe",
+          "label": "Ignorar Marcos, correr para a sala privada de Helena e procurar o cofre oculto atrás do painel de arte.",
+          "nextNodeId": "node_ch2_safe_discovery",
+          "statChanges": {
+            "heat": 15
+          }
+        },
+        {
+          "id": "choice_ch2_interrogate_daniel_link",
+          "label": "Exigir provas a Marcos sobre as supostas dívidas de jogo de Daniel antes de mexer em qualquer coisa.",
+          "nextNodeId": "node_ch2_safe_discovery",
+          "statChanges": {
+            "trust": -10,
+            "heat": 5
+          },
+          "addEvidence": [
+            "alegacao_dividas_daniel"
+          ]
+        }
+      ]
+    },
+    "node_ch2_safe_discovery": {
+      "id": "node_ch2_safe_discovery",
+      "text": "Com o coração a bater descompassado, você afasta a tela decorativa na parede da sala de Helena. Lá está ele: um cofre digital embutido. Digitando a data de aniversário de vocês — a única combinação que Helena consideraria sagrada —, a pequena porta metálica abre-se com um estalido seco.\n\nDentro, não há dinheiro. Há apenas um pen drive encriptado e uma fotografia antiga impressa: Daniel e Marcos conversando em tom tenso num estacionamento subterrâneo, tirada há exatamente três dias.\n\nUm som repentino de passos ecoa no corredor escuro da agência. Alguém trancou a porta principal por fora.",
+      "choices": [
+        {
+          "id": "choice_ch2_cliffhanger",
+          "label": "Esconder o pen drive no bolso, apagar a luz e preparar-se para enfrentar quem está a aproximar-se na penumbra.",
+          "endingId": "ending_cliffhanger_2"
+        }
+      ]
+    }
+  },
+  "endings": {
+    "ending_cliffhanger_2": {
+      "id": "ending_cliffhanger_2",
+      "title": "Fim do Capítulo 2 — A Armadilha Corporativa",
+      "text": "A maçaneta da porta da sala gira lentamente na penumbra. Uma silhueta desenha-se no vidro fosco do escritório, acompanhada por uma voz conhecida que sussurra na escuridão:\n\n'Eu avisei-te para não cavares onde não deves, querida. Agora já é tarde demais para voltar atrás.'",
+      "requiredEvidence": []
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+
+  "id": "black-rain",
+
+  "version": 1,
+
+  "title": "Chuva Negra",
+
+  "synopsis": "Uma ligação anônima coloca você diante de um crime que ainda está acontecendo.",
+
+  "cover": "cover.webp",
+
+  "category": "suspense",
+
+  "startNodeId": "scene-001",
+
+  "nodes": {
+
+    "scene-001": {
+
+      "id": "scene-001",
+
+      "text": "Você acorda com três batidas na porta. A chuva apaga as últimas luzes da rua.",
+
+      "image": "scene-001.webp",
+
+      "choices": [
+
+        {
+
+          "id": "open-door",
+
+          "label": "Abrir a porta",
+
+          "nextNodeId": "scene-002",
+
+          "endingId": null,
+
+          "requires": [],
+
+          "addEvidence": ["wet-footprints"],
+
+          "removeEvidence": [],
+
+          "keyCost": 0
+
+        },
+
+        {
+
+          "id": "check-window",
+
+          "label": "Observar pela janela",
+
+          "nextNodeId": null,
+
+          "endingId": "truth",
+
+          "requires": [],
+
+          "addEvidence": ["black-car"],
+
+          "removeEvidence": [],
+
+          "keyCost": 0
+
+        }
+
+      ]
+
+    },
+
+    "scene-002": {
+
+      "id": "scene-002",
+
+      "text": "Você encontra marcas de água no corredor, mas a pessoa já desapareceu.",
+
+      "image": "scene-002.webp",
+
+      "choices": [
+
+        {
+
+          "id": "follow-trail",
+
+          "label": "Seguir as marcas",
+
+          "nextNodeId": null,
+
+          "endingId": "false-lead",
+
+          "requires": ["wet-footprints"],
+
+          "addEvidence": [],
+
+          "removeEvidence": [],
+
+          "keyCost": 0
+
+        }
+
+      ]
+
+    }
+
+  },
+
+  "endings": {
+
+    "truth": {
+
+      "id": "truth",
+
+      "title": "A verdade sob a chuva",
+
+      "text": "As conexões no seu quadro revelam o autor do crime.",
+
+      "requiredEvidence": ["wet-footprints", "black-car"]
+
+    },
+
+    "false-lead": {
+
+      "id": "false-lead",
+
+      "title": "Uma pista falsa",
+
+      "text": "A chuva levou a única pista antes que você pudesse conectá-la.",
+
+      "requiredEvidence": []
+
+    }
+
+  }
+
+} 

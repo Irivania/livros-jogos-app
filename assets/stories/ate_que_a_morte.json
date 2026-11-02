@@ -1,0 +1,17 @@
+{
+  "id": "ate_que_a_morte",
+  "version": 1,
+  "title": "Até que a Morte nos Separe",
+  "synopsis": "Uma noite chuvosa em Perdizes, um assassinato brutal e o homem que você ama com as mãos cobertas de sangue.",
+  "cover": "cover.webp",
+  "category": "Suspense Psicológico",
+  "startNodeId": "node_prologue_start",
+  "chapterFiles": [
+    "ate_que_a_morte_cap0.json",
+    "ate_que_a_morte_cap1.json",
+    "ate_que_a_morte_cap2.json",
+    "ate_que_a_morte_cap3.json",
+    "ate_que_a_morte_cap4.json",
+    "ate_que_a_morte_cap5.json"
+  ]
+}

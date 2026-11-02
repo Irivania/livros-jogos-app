@@ -1,0 +1,119 @@
+{
+  "nodes": {
+    "node_1_arrival": {
+      "id": "node_1_arrival",
+      "text": "A noite de São Paulo chora contra os vidros blindados da cobertura na Rua Caiubi, em Perdizes. O cheiro denso, metálico e inconfundível de sangue fresco domina o ar.\n\nDiante do tapete persa escarlate, Helena jaz imóvel. O pescoço pálido está marcado pelo nó de um lenço de seda azul-marinho. Ajoelhado ao lado do corpo, com as mãos completamente vermelhas, está Daniel. O homem com quem você partilhou os últimos cinco anos.\n\n— Eu juro... — a voz dele sai como um sussurro roto, sufocado pelo choro. — Quando cheguei... ela já estava assim. Você tem de acreditar em mim. Sou eu!",
+      "choices": [
+        {
+          "id": "choice_1_hug",
+          "label": "Correr para abraçá-lo com força e dizer que acredita nele.",
+          "nextNodeId": "node_2_daniel_version",
+          "statChanges": {
+            "trust": 15,
+            "heat": 0
+          },
+          "addEvidence": [
+            "abstr_testemunho_inicial_daniel"
+          ]
+        },
+        {
+          "id": "choice_2_distance",
+          "label": "Afastar-se, dar passos para trás e exigir saber por que as mãos dele estão cheias de sangue.",
+          "nextNodeId": "node_2_daniel_version",
+          "statChanges": {
+            "trust": -20,
+            "heat": 10
+          }
+        },
+        {
+          "id": "choice_3_search",
+          "label": "Ignorar o choro dele e olhar ao redor, notando o telemóvel de Helena vibrando na estante.",
+          "nextNodeId": "node_3_secret_phone",
+          "statChanges": {
+            "trust": -10,
+            "heat": 5
+          },
+          "addEvidence": [
+            "celular_helena_silencioso"
+          ]
+        }
+      ]
+    },
+    "node_2_daniel_version": {
+      "id": "node_2_daniel_version",
+      "text": "Daniel levanta-se cambaleante, as pernas trêmulas. O desespero dele aperta o seu peito, mas no bolso do casaco dele você sente o relevo rígido de um segundo telemóvel oculto que vibra contra a sua mão.\n\n— Tu confias em mim, não confias? — pergunta ele, os olhos dilatados pelo terror.",
+      "choices": [
+        {
+          "id": "choice_believe_him",
+          "label": "Ignorar a desconfiança e prometer inventar um álibi conjunto.",
+          "nextNodeId": "node_4_police_approaching",
+          "requiredStats": {
+            "trust": 55
+          },
+          "statChanges": {
+            "trust": 20,
+            "heat": -5
+          }
+        },
+        {
+          "id": "choice_doubt_him",
+          "label": "Confrontá-lo diretamente sobre o telemóvel secreto no bolso dele.",
+          "nextNodeId": "node_4_police_approaching",
+          "statChanges": {
+            "trust": -15,
+            "heat": 15
+          },
+          "addEvidence": [
+            "alibi_contraditorio_daniel"
+          ]
+        }
+      ]
+    },
+    "node_3_secret_phone": {
+      "id": "node_3_secret_phone",
+      "text": "Você caminha em silêncio até o aparador. Na tela do telemóvel corporativo de Helena, há uma transferência bancária Pix de R$ 85.000 para Marcos, o sócio da agência, e uma mensagem ameaçadora.\n\nO piso range atrás de si. Daniel aproxima-se, a voz fria e cortante: — Deixa isso onde está. Afasta-te do telemóvel dela.",
+      "choices": [
+        {
+          "id": "choice_pocket_phone",
+          "label": "Agarrar o telemóvel rapidamente e escondê-lo no fundo do seu casaco.",
+          "nextNodeId": "node_4_police_approaching",
+          "statChanges": {
+            "trust": -5,
+            "heat": 20
+          },
+          "addEvidence": [
+            "telemovel_corporativo_helena"
+          ]
+        },
+        {
+          "id": "choice_show_daniel",
+          "label": "Mostrar a tela do telemóvel diretamente a Daniel para ver a reação dele.",
+          "nextNodeId": "node_4_police_approaching",
+          "statChanges": {
+            "trust": 10,
+            "heat": 5
+          }
+        }
+      ]
+    },
+    "node_4_police_approaching": {
+      "id": "node_4_police_approaching",
+      "text": "As luzes vermelhas e azuis das viaturas policiais pintam as paredes de Perdizes. O barulho de botas a correr escada acima faz o edifício vibrar.\n\nA porta é violentamente empurrada. — Polícia! Ninguém se mexa! — grita o agente, apontando a lanterna.",
+      "choices": [
+        {
+          "id": "choice_final_chapter_1",
+          "label": "Encarar a polícia e ouvir o som do telemóvel a vibrar no bolso com a mensagem de Helena.",
+          "endingId": "ending_cliffhanger_1"
+        }
+      ]
+    }
+  },
+  "endings": {
+    "ending_cliffhanger_1": {
+      "id": "ending_cliffhanger_1",
+      "title": "Fim do Capítulo 1 — O Alerta Silencioso",
+      "text": "Enquanto os agentes algemam Daniel, o seu casaco vibra. No visor do telemóvel, a mensagem agendada de Helena brilha na escuridão:\n\n'Ele mentiu sobre onde estava às 21h. E se a polícia encontrar o cofre da agência antes de ti, já não há para onde correr.'",
+      "requiredEvidence": []
+    }
+  }
+}
