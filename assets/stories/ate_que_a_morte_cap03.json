@@ -1,0 +1,156 @@
+{
+  "nodes": {
+    "node_ch3_start": {
+      "id": "node_ch3_start",
+      "text": "A perícia chegou em silêncio. Homens e mulheres de branco, câmeras, flashes e fitas amarelas transformaram a nossa sala num território estranho. Eu estava no hall, ainda de vestido de gala, quando o Delegado Ribeiro indicou que Daniel precisaria de ser acompanhado até à delegacia.\n\n— A senhora também — acrescentou Ribeiro, sem me olhar diretamente. — Para depoimento formal. Ou pode ser aqui, se preferir aguardar.\n\nDuas portas se abriam diante de mim: a da frente, que levava ao tumulto da delegacia; e a da cozinha, que levava à casa vazia, à chave escondida na despensa e às perguntas que só eu poderia fazer.",
+      "choices": [
+        {
+          "id": "choice_ch3_stay_home",
+          "label": "Ficar em casa sob vigilância moderada, vendo Daniel partir sozinho na viatura rumo à delegacia.",
+          "nextNodeId": "node_ch3_variant_house",
+          "statChanges": {
+            "rigor_investigacao": 5
+          }
+        },
+        {
+          "id": "choice_ch3_go_station",
+          "label": "Acompanhar Daniel até à delegacia no banco traseiro, enfrentando o silêncio e o peso do interrogatório.",
+          "nextNodeId": "node_ch3_variant_station",
+          "statChanges": {
+            "relacao_policia": 5
+          }
+        }
+      ]
+    },
+    "node_ch3_variant_house": {
+      "id": "node_ch3_variant_house",
+      "text": "Ribeiro concordou em me ouvir em casa, deixando um policial de guarda na porta. Vi Daniel ser conduzido para a viatura através do vidro, a cabeça baixa, as mãos ainda manchadas.\n\nCom a casa vazia e a fita amarela a isolar a sala, troquei de roupa — vestindo calças jeans, blusa cinza e tênis. Na despensa, a chave desconhecida de metal escuro com o número 247 ainda lá estava. Peguei-a. Em seguida, acedi ao laptop de Daniel no escritório: contornei a senha utilizando memórias de infância, encontrei planilhas de obra e um arquivo recente chamado 'backup_helena.zip', além de fotos suspeitas de uma garagem subterrânea apagadas na lixeira.",
+      "choices": [
+        {
+          "id": "to_ch3_convergence_house",
+          "label": "Avançar para o momento em que os caminhos convergem com os pertences de Helena.",
+          "nextNodeId": "node_ch3_convergence"
+        }
+      ]
+    },
+    "node_ch3_variant_station": {
+      "id": "node_ch3_variant_station",
+      "text": "Fui levada à delegacia de Perdizes. Numa sala pequena, aguardei até ser abordada pela advogada Beatriz Falcão, enviada pela família de Daniel. Ela orientou-me sobre como proceder perante as perguntas de Ribeiro.\n\nDurante o interrogatório formal, Ribeiro pressionou sobre a linha temporal e revelou um dado inédito: Helena estava em processo de divórcio em segredo há oito meses. Ao término, recebi autorização para retornar à residência, com a estrita condição de não entrar na sala isolada.",
+      "choices": [
+        {
+          "id": "to_ch3_convergence_station",
+          "label": "Retornar à residência e avançar para a convergência dos fatos.",
+          "nextNodeId": "node_ch3_convergence"
+        }
+      ]
+    },
+    "node_ch3_convergence": {
+      "id": "node_ch3_convergence",
+      "text": "De volta à casa transformada em território desconhecido, encontro no hall uma caixa de papelão contendo os pertences de Helena deixados pela polícia. No interior da bolsa dela, descubro um cartão de visita do Dr. Gustavo Pimentel, Psiquiatra, com uma consulta datada de véspera e uma anotação manuscrita de Helena no verso: *'Não contar para ninguém. Especialmente não para ela.'*\n\nNesse exato instante, o meu telefone toca. É Daniel, a ligar de um número restrito, com a voz exausta:\n\n— Preciso que faças uma coisa. No meu escritório, gaveta inferior, pasta marrom. Leva para a Beatriz. Hoje. Não perguntes porquê, apenas faz.\n\nA chamada cai. O cerco aperta-se e cada escolha trará consequências definitivas.",
+      "choices": [
+        {
+          "id": "choice_ch3_daniel_folder",
+          "label": "Ir ao escritório de Daniel buscar a pasta marrom para entregar a Beatriz, hesitando sobre se deve abri-la primeiro.",
+          "nextNodeId": "node_ch3_route_a",
+          "statChanges": {
+            "confianca_daniel": 5
+          },
+          "addEvidence": [
+            "telefonema_urgente_daniel"
+          ]
+        },
+        {
+          "id": "choice_ch3_psychiatrist",
+          "label": "Ligar para o número no cartão do psiquiatra para descobrir o que Helena escondia e por que estava vulnerável.",
+          "nextNodeId": "node_ch3_route_b",
+          "statChanges": {
+            "rigor_investigacao": 10
+          },
+          "addEvidence": [
+            "cartao_psiquiatra_helena",
+            "anotacao_oculta_helena"
+          ]
+        },
+        {
+          "id": "choice_ch3_examine_box",
+          "label": "Examinar minuciosamente a caixa de pertences de Helena e a chave '247' para rastrear pistas ignoradas pela polícia.",
+          "nextNodeId": "node_ch3_route_c",
+          "statChanges": {
+            "rigor_investigacao": 15
+          },
+          "addEvidence": [
+            "chave_desconhecida_247",
+            "pertences_pessoais_helena"
+          ]
+        },
+        {
+          "id": "choice_ch3_lumen_design",
+          "label": "Ignorar os avisos, sair de casa e ir diretamente à Lumen Design confrontar Marcos e vasculhar os documentos financeiros da empresa.",
+          "nextNodeId": "node_ch3_route_d",
+          "statChanges": {
+            "descobertas_lumen": 10
+          },
+          "addEvidence": [
+            "confronto_direto_marcos"
+          ]
+        }
+      ]
+    },
+    "node_ch3_route_a": {
+      "id": "node_ch3_route_a",
+      "text": "Você decide ceder ao pedido de Daniel, movida pelo fio de lealdade que ainda vos une, preparando-se para lidar com o conteúdo oculto da pasta marrom.",
+      "choices": [
+        {
+          "id": "to_ch4_a",
+          "label": "Avançar para o Capítulo 4...",
+          "nextNodeId": "node_ch4_start"
+        }
+      ]
+    },
+    "node_ch3_route_b": {
+      "id": "node_ch3_route_b",
+      "text": "Você marca o número do psiquiatra, decidida a descobrir as faturas emocionais que Helena carregava sozinha antes daquela noite trágica.",
+      "choices": [
+        {
+          "id": "to_ch4_b",
+          "label": "Avançar para o Capítulo 4...",
+          "nextNodeId": "node_ch4_start"
+        }
+      ]
+    },
+    "node_ch3_route_c": {
+      "id": "node_ch3_route_c",
+      "text": "Com rigor analítico, você vasculha cada centímetro da caixa de Helena, unindo a misteriosa chave '247' a novos elementos de prova material.",
+      "choices": [
+        {
+          "id": "to_ch4_c",
+          "label": "Avançar para o Capítulo 4...",
+          "nextNodeId": "node_ch4_start"
+        }
+      ]
+    },
+    "node_ch3_route_d": {
+      "id": "node_ch3_route_d",
+      "text": "Você ruma à Lumen Design na Faria Lima, disposta a encarar Marcos e a desenterrar os segredos financeiros que sustentavam as chantagens da agência.",
+      "choices": [
+        {
+          "id": "to_ch4_d",
+          "label": "Avançar para o Capítulo 4...",
+          "nextNodeId": "node_ch4_start"
+        }
+      ]
+    },
+    "node_ch4_start": {
+      "id": "node_ch4_start",
+      "text": "A investigação entra numa fase crítica onde cada pista recolhida dita o rumo da verdade e o destino de Daniel.",
+      "choices": [
+        {
+          "id": "ch4_next_node",
+          "label": "Prosseguir para o início do Capítulo 4...",
+          "nextNodeId": "node_ch4_scene_start"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

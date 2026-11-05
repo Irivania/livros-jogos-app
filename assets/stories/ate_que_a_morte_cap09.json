@@ -1,0 +1,124 @@
+{
+  "nodes": {
+    "node_ch9_start": {
+      "id": "node_ch9_start",
+      "text": "O poço da obra na Vila Madalena revelou a sua verdade definitiva. Entre a escuridão da cisterna e o peso das revelações, o mistério construído à volta de Juliana Costa, de Helena e da rede de Marcos atinge o seu clímax absoluto.\n\nConforme as escolhas que o trouxeram até aqui, o destino final da verdade e a sua própria sobrevivência encontram o seu rumo.",
+      "choices": [
+        {
+          "id": "choice_ch9_ending_a",
+          "label": "Concluir o confronto solitário e aceitar a ambiguidade da verdade e do silêncio.",
+          "nextNodeId": "node_epilogue_a",
+          "statChanges": {
+            "rigor_investigacao": 25
+          },
+          "addEvidence": [
+            "epilogo_ambiguo_solitario"
+          ]
+        },
+        {
+          "id": "choice_ch9_ending_b",
+          "label": "Aceitar os termos da escavação legal e seguir o caminho da justiça institucional.",
+          "nextNodeId": "node_epilogue_b",
+          "statChanges": {
+            "relacao_policia": 15
+          },
+          "addEvidence": [
+            "epilogo_institucional_cooperativo"
+          ]
+        },
+        {
+          "id": "choice_ch9_ending_c",
+          "label": "Seguir o rasto melancólico do confronto final com Daniel e o peso das memórias.",
+          "nextNodeId": "node_epilogue_c",
+          "statChanges": {
+            "confianca_daniel": -20
+          },
+          "addEvidence": [
+            "epilogo_melancolico_daniel"
+          ]
+        },
+        {
+          "id": "choice_ch9_ending_d",
+          "label": "Consolidar a operação policial formal e fechar o caso perante a lei.",
+          "nextNodeId": "node_epilogue_d",
+          "statChanges": {
+            "relacao_policia": 25
+          },
+          "addEvidence": [
+            "epilogo_fechamento_formal"
+          ]
+        }
+      ]
+    },
+    "node_epilogue_a": {
+      "id": "node_epilogue_a",
+      "text": "A verdade não trouxe a libertação total, mas sim a consciência da profundidade do poço. Sobreviveu à névoa de São Paulo, carregando os segredos que o tempo não consegue apagar.",
+      "choices": [
+        {
+          "id": "end_game_a",
+          "label": "Terminar o jogo...",
+          "endingId": "ending_epilogue_ambiguous"
+        }
+      ]
+    },
+    "node_epilogue_b": {
+      "id": "node_epilogue_b",
+      "text": "A escavação revelou múltiplas ossadas e um passado muito mais vasto. Com a imunidade garantida por Beatriz, o sistema absorve o impacto, deixando um vazio existencial difícil de preencher.",
+      "choices": [
+        {
+          "id": "end_game_b",
+          "label": "Terminar o jogo...",
+          "endingId": "ending_epilogue_institutional"
+        }
+      ]
+    },
+    "node_epilogue_c": {
+      "id": "node_epilogue_c",
+      "text": "Daniel desapareceu nas sombras, deixando para trás um rasto de sangue e confissões incompletas. Senta-se no banco do parque, sabendo que algumas perguntas nunca terão respostas limpas.",
+      "choices": [
+        {
+          "id": "end_game_c",
+          "label": "Terminar o jogo...",
+          "endingId": "ending_epilogue_melancholic"
+        }
+      ]
+    },
+    "node_epilogue_d": {
+      "id": "node_epilogue_d",
+      "text": "A justiça institucional cumpriu o seu papel formal: Daniel preso, as provas entregues a Ribeiro, e o Parque Juliana Costa construído sobre as ruínas do silêncio. A lei venceu, mas a alma continua a questionar.",
+      "choices": [
+        {
+          "id": "end_game_d",
+          "label": "Terminar o jogo...",
+          "endingId": "ending_epilogue_closed"
+        }
+      ]
+    }
+  },
+  "endings": {
+    "ending_epilogue_ambiguous": {
+      "id": "ending_epilogue_ambiguous",
+      "title": "Fim — O Ciclo Aberto",
+      "text": "O telemóvel vibra com uma mensagem de número desconhecido: 'Fez a escolha certa, ou apenas a escolha com que consegue viver?' Levanta-se e segue em frente, sabendo que nem todos os monstros ficam presos no fundo do poço.",
+      "requiredEvidence": []
+    },
+    "ending_epilogue_institutional": {
+      "id": "ending_epilogue_institutional",
+      "title": "Fim — A Justiça dos Ossos",
+      "text": "Com o caso alargado a novas investigações e o apoio de Ribeiro, o poço foi finalmente selado. Resta a rotina cinzenta de quem sobreviveu à própria história.",
+      "requiredEvidence": []
+    },
+    "ending_epilogue_melancholic": {
+      "id": "ending_epilogue_melancholic",
+      "title": "Fim — A Sombra de Daniel",
+      "text": "As peças encaixaram-se de forma trágica. Entre a culpa de Daniel e a proteção póstuma de Helena, resta apenas o eco de um amor que ruiu sob o peso do medo.",
+      "requiredEvidence": []
+    },
+    "ending_epilogue_closed": {
+      "id": "ending_epilogue_closed",
+      "title": "Fim — O Veredito Institucional",
+      "text": "O processo judicial encerrou-se. O parque substituiu a obra abandonada. A lei fez o seu trabalho frio e metódico, devolvendo São Paulo à sua serenidade aparente.",
+      "requiredEvidence": []
+    }
+  }
+}

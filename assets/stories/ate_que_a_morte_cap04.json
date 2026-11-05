@@ -1,0 +1,110 @@
+{
+  "nodes": {
+    "node_ch4_start": {
+      "id": "node_ch4_start",
+      "text": "A investigação entra numa fase crítica onde cada pista recolhida dita o rumo da verdade e o destino de Daniel. Com base nas suas escolhas recentes, as peças começam a acumular-se sobre a mesa da cozinha: extratos bancários ocultos, fotografias comprometedoras, bilhetes de estacionamento e cartas de ameaça que revelam uma teia de segredos muito mais complexa do que imaginava.",
+      "choices": [
+        {
+          "id": "choice_ch4_to_delegation",
+          "label": "Ir à delegacia encontrar o Delegado Ribeiro para confrontar as novidades oficiais da investigação.",
+          "nextNodeId": "node_ch4_route_a",
+          "statChanges": {
+            "relacao_policia": 5
+          },
+          "addEvidence": [
+            "relatorio_parcial_pericia"
+          ]
+        },
+        {
+          "id": "choice_ch4_call_carla",
+          "label": "Ligar para Carla, funcionária da Lumen Design, para obter um testemunho fora dos canais oficiais da empresa.",
+          "nextNodeId": "node_ch4_route_b",
+          "statChanges": {
+            "rigor_investigacao": 5
+          },
+          "addEvidence": [
+            "testemunho_sigiloso_carla"
+          ]
+        },
+        {
+          "id": "choice_ch4_analyze_evidence",
+          "label": "Examinar sistematicamente todo o material recolhido (chaves, fotos, cartas e extratos) à procura de padrões ocultos.",
+          "nextNodeId": "node_ch4_route_c",
+          "statChanges": {
+            "rigor_investigacao": 10
+          },
+          "addEvidence": [
+            "sintese_evidencias_cruzadas"
+          ]
+        },
+        {
+          "id": "choice_ch4_vila_madalena",
+          "label": "Desviar da vigilância e ir à Vila Madalena inspecionar a obra que Daniel supervisionava na noite do crime.",
+          "nextNodeId": "node_ch4_route_d",
+          "statChanges": {
+            "descobertas_lumen": 10
+          },
+          "addEvidence": [
+            "verificacao_obra_vila_madalena"
+          ]
+        }
+      ]
+    },
+    "node_ch4_route_a": {
+      "id": "node_ch4_route_a",
+      "text": "Você dirige-se à delegacia e entra na sala de Ribeiro. O comissário exibe um olhar analítico, ciente de que você traz mais do que simples preocupações conjugais.",
+      "choices": [
+        {
+          "id": "to_ch5_a",
+          "label": "Avançar para o Capítulo 5...",
+          "nextNodeId": "node_ch5_start"
+        }
+      ]
+    },
+    "node_ch4_route_b": {
+      "id": "node_ch4_route_b",
+      "text": "Num café discreto na Faria Lima, você encontra Carla. As mãos dela tremem ao revelar o que sabia sobre as pressões que Helena sofria nos bastidores da Lumen Design.",
+      "choices": [
+        {
+          "id": "to_ch5_b",
+          "label": "Avançar para o Capítulo 5...",
+          "nextNodeId": "node_ch5_start"
+        }
+      ]
+    },
+    "node_ch4_route_c": {
+      "id": "node_ch4_route_c",
+      "text": "Espalhando fotografias, extratos e bilhetes pela mesa, você cruza horários e locais, desvendando a cronologia secreta dos últimos dias de Helena e Daniel.",
+      "choices": [
+        {
+          "id": "to_ch5_c",
+          "label": "Avançar para o Capítulo 5...",
+          "nextNodeId": "node_ch5_start"
+        }
+      ]
+    },
+    "node_ch4_route_d": {
+      "id": "node_ch4_route_d",
+      "text": "Sob a neblina da Vila Madalena, você chega ao endereço da obra. O local está deserto, mas há indícios claros de que alguém esteve ali recentemente para apagar rastros.",
+      "choices": [
+        {
+          "id": "to_ch5_d",
+          "label": "Avançar para o Capítulo 5...",
+          "nextNodeId": "node_ch5_start"
+        }
+      ]
+    },
+    "node_ch5_start": {
+      "id": "node_ch5_start",
+      "text": "Todas as pistas convergem para o momento da verdade. O cerco aperta-se e as decisões tomadas até aqui definirão o desfecho desta trágica história em Perdizes.",
+      "choices": [
+        {
+          "id": "ch5_next_node",
+          "label": "Prosseguir para o início do Capítulo 5...",
+          "nextNodeId": "node_ch5_scene_start"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

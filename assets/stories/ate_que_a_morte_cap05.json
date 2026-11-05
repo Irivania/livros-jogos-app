@@ -1,0 +1,110 @@
+{
+  "nodes": {
+    "node_ch5_start": {
+      "id": "node_ch5_start",
+      "text": "A investigação chega ao seu momento mais crítico. As peças do quebra-cabeça acumulam-se: fibras de algodão azul-marinho sob as unhas de Helena, transferências suspeitas para a conta DM Construtora em nome de Daniel, testemunhos sobre as discussões de Marcos e o mistério em torno da obra fantástica na Vila Madalena.\n\nA pergunta central já não é apenas quem matou Helena, mas sim quem você está a tentar salvar — e porquê.",
+      "choices": [
+        {
+          "id": "choice_ch5_meet_daniel",
+          "label": "Ir ao encontro de Daniel para confrontá-lo diretamente sobre as contas ocultas e a verdade por trás da noite do crime.",
+          "nextNodeId": "node_ch5_route_a",
+          "statChanges": {
+            "confianca_daniel": 10
+          },
+          "addEvidence": [
+            "confronto_direto_daniel"
+          ]
+        },
+        {
+          "id": "choice_ch5_meet_beatriz",
+          "label": "Ir ao escritório de Beatriz examinar o conteúdo legal da pasta marrom e traçar uma estratégia defensiva.",
+          "nextNodeId": "node_ch5_route_b",
+          "statChanges": {
+            "rigor_investigacao": 10
+          },
+          "addEvidence": [
+            "analise_juridica_beatriz"
+          ]
+        },
+        {
+          "id": "choice_ch5_call_ribeiro",
+          "label": "Ligar para o Delegado Ribeiro para entregar formalmente as novas descobertas e buscar proteção oficial.",
+          "nextNodeId": "node_ch5_route_c",
+          "statChanges": {
+            "relacao_policia": 10
+          },
+          "addEvidence": [
+            "entrega_formal_provas_ribeiro"
+          ]
+        },
+        {
+          "id": "choice_ch5_isolate_and_flee",
+          "label": "Abandonar a casa e afastar-se de todos para pensar com clareza longe das pressões da polícia e de Daniel.",
+          "nextNodeId": "node_ch5_route_d",
+          "statChanges": {
+            "confianca_daniel": -15
+          },
+          "addEvidence": [
+            "isolamento_estrategico"
+          ]
+        }
+      ]
+    },
+    "node_ch5_route_a": {
+      "id": "node_ch5_route_a",
+      "text": "Você marca um ponto de encontro isolado com Daniel. Ao vê-lo aproximar-se, percebe que o homem à sua frente carrega tanto segredos quanto desespero.",
+      "choices": [
+        {
+          "id": "to_climax_a",
+          "label": "Avançar para o Capítulo 6...",
+          "nextNodeId": "node_ch6_start"
+        }
+      ]
+    },
+    "node_ch5_route_b": {
+      "id": "node_ch5_route_b",
+      "text": "No escritório de Beatriz, os documentos da pasta marrom são abertos um a um, revelando conexões contratuais que mudam o panorama legal do caso.",
+      "choices": [
+        {
+          "id": "to_climax_b",
+          "label": "Avançar para o Capítulo 6...",
+          "nextNodeId": "node_ch6_start"
+        }
+      ]
+    },
+    "node_ch5_route_c": {
+      "id": "node_ch5_route_c",
+      "text": "De volta à delegacia, você coloca todas as evidências recolhidas sobre a mesa de Ribeiro, alinhando-se com a autoridade para desvendar o mistério.",
+      "choices": [
+        {
+          "id": "to_climax_c",
+          "label": "Avançar para o Capítulo 6...",
+          "nextNodeId": "node_ch6_start"
+        }
+      ]
+    },
+    "node_ch5_route_d": {
+      "id": "node_ch5_route_d",
+      "text": "Escondida do mundo num refúgio temporário, você pondera cada detalhe descoberto, longe do alcance de Marcos, da polícia e de Daniel.",
+      "choices": [
+        {
+          "id": "to_climax_d",
+          "label": "Avançar para o Capítulo 6...",
+          "nextNodeId": "node_ch6_start"
+        }
+      ]
+    },
+    "node_ch6_start": {
+      "id": "node_ch6_start",
+      "text": "O cerco fecha-se definitivamente sobre Perdizes. As escolhas feitas ao longo da investigação determinam o desfecho desta trama de suspense psicológico.",
+      "choices": [
+        {
+          "id": "ch6_next_node",
+          "label": "Prosseguir para o início do Capítulo 6...",
+          "nextNodeId": "node_ch6_scene_start"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

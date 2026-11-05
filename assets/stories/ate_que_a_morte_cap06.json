@@ -1,0 +1,110 @@
+{
+  "nodes": {
+    "node_ch6_start": {
+      "id": "node_ch6_start",
+      "text": "A noite e a madrugada trouxeram revelações avassaladoras: Daniel esclarece que Helena o recrutara para investigar o esquema de lavagem de dinheiro de Marcos, Beatriz prova que a DM Construtora servia apenas de canal para uma offshore, e Ribeiro admite que Daniel pode não ser o único suspeito.\n\nContudo, a reviravolta mais brutal estilhaça o tabuleiro de xadrez: Marcos Oliveira foi encontrado morto num apartamento na Vila Olímpia. O homem que controlava a chantagem e as ameaças a Helena está agora silenciado para sempre. Com o computador dele ligado e a senha acessível na sua memória, o centro de gravidade do mistério mudou por completo.",
+      "choices": [
+        {
+          "id": "choice_ch6_marcos_apartment",
+          "label": "Invadir o apartamento de Marcos para aceder ao computador antes que a polícia descubra a senha.",
+          "nextNodeId": "node_ch6_route_a",
+          "statChanges": {
+            "rigor_investigacao": 15
+          },
+          "addEvidence": [
+            "acesso_privilegiado_computador_marcos"
+          ]
+        },
+        {
+          "id": "choice_ch6_call_ribeiro",
+          "label": "Ligar imediatamente para Ribeiro para entregar a senha e negociar uma posição de proteção e parceria formal.",
+          "nextNodeId": "node_ch6_route_b",
+          "statChanges": {
+            "relacao_policia": 10
+          },
+          "addEvidence": [
+            "parceria_informal_ribeiro"
+          ]
+        },
+        {
+          "id": "choice_ch6_find_daniel",
+          "label": "Procurar Daniel desesperadamente para protegê-lo, sabendo que ele agora pode ser o próximo alvo do assassino de Marcos.",
+          "nextNodeId": "node_ch6_route_c",
+          "statChanges": {
+            "confianca_daniel": 15
+          },
+          "addEvidence": [
+            "protecao_mutua_daniel"
+          ]
+        },
+        {
+          "id": "choice_ch6_lumen_design_unlocked",
+          "label": "Voltar à Lumen Design agora que Marcos está morto, utilizando o acesso livre para vasculhar os arquivos confidenciais de Helena.",
+          "nextNodeId": "node_ch6_route_d",
+          "statChanges": {
+            "descobertas_lumen": 15
+          },
+          "addEvidence": [
+            "arquivos_definitivos_lumen"
+          ]
+        }
+      ]
+    },
+    "node_ch6_route_a": {
+      "id": "node_ch6_route_a",
+      "text": "Você entra furtivamente no apartamento isolado de Marcos. Diante do ecrã iluminado do computador, insere a senha '1406' e aguarda que os segredos mais profundos venham à tona.",
+      "choices": [
+        {
+          "id": "to_climax_final_a",
+          "label": "Avançar para o Capítulo 7...",
+          "nextNodeId": "node_ch7_start"
+        }
+      ]
+    },
+    "node_ch6_route_b": {
+      "id": "node_ch6_route_b",
+      "text": "Ao partilhar a descoberta com o Delegado Ribeiro, você sela um pacto de cooperação estreita, unindo forças para desvendar a conspiração por trás das mortes.",
+      "choices": [
+        {
+          "id": "to_climax_final_b",
+          "label": "Avançar para o Capítulo 7...",
+          "nextNodeId": "node_ch7_start"
+        }
+      ]
+    },
+    "node_ch6_route_c": {
+      "id": "node_ch6_route_c",
+      "text": "Num abrigo seguro na zona sul, você reencontra Daniel. Partilhando medos e verdades, vocês preparam-se para o confronto decisivo contra a verdadeira ameaça.",
+      "choices": [
+        {
+          "id": "to_climax_final_c",
+          "label": "Avançar para o Capítulo 7...",
+          "nextNodeId": "node_ch7_start"
+        }
+      ]
+    },
+    "node_ch6_route_d": {
+      "id": "node_ch6_route_d",
+      "text": "No escritório escuro da Lumen Design, as gavetas trancadas cedem, revelando os documentos definitivos que ligam todas as pontas soltas da investigação.",
+      "choices": [
+        {
+          "id": "to_climax_final_d",
+          "label": "Avançar para o Capítulo 7...",
+          "nextNodeId": "node_ch7_start"
+        }
+      ]
+    },
+    "node_ch7_start": {
+      "id": "node_ch7_start",
+      "text": "O cerco final está armado. Todas as evidências convergem para o último ato em Perdizes.",
+      "choices": [
+        {
+          "id": "ch7_next_node",
+          "label": "Prosseguir para o início do Capítulo 7...",
+          "nextNodeId": "node_ch7_scene_start"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

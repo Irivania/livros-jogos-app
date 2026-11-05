@@ -7,11 +7,15 @@
   "category": "Suspense Psicológico",
   "startNodeId": "node_prologue_start",
   "chapterFiles": [
-    "ate_que_a_morte_cap0.json",
-    "ate_que_a_morte_cap1.json",
-    "ate_que_a_morte_cap2.json",
-    "ate_que_a_morte_cap3.json",
-    "ate_que_a_morte_cap4.json",
-    "ate_que_a_morte_cap5.json"
+    "ate_que_a_morte_cap01.json",
+    "ate_que_a_morte_cap02.json",
+    "ate_que_a_morte_cap03.json",
+    "ate_que_a_morte_cap04.json",
+    "ate_que_a_morte_cap05.json",
+    "ate_que_a_morte_cap06.json",
+    "ate_que_a_morte_cap07.json",
+    "ate_que_a_morte_cap08.json",
+    "ate_que_a_morte_cap09.json"
+     
   ]
 }

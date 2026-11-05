@@ -1,0 +1,103 @@
+{
+  "nodes": {
+    "node_ch2_start": {
+      "id": "node_ch2_start",
+      "text": "As sirenes cortam a noite molhada. Luzes vermelhas e azuis dançam nas paredes da sala através da porta de vidro aberta. Não me movo. Daniel não se move. Parecemos personagens congelados num diorama que eu mesma projetaria — só que agora sou eu dentro dele, e não há perspectiva de que me dê distância suficiente.\n\nDois policiais entram primeiro, armas em punho, gritando ordens. Levanto as mãos instintivamente. Daniel demora um segundo a mais para reagir, como se precisasse traduzir as ordens para uma língua que ele ainda esteja reaprendendo.\n\n— Para trás. Agora.\n\nConduzem-nos para cantos opostos da sala. Um deles posiciona-se entre mim e Daniel. Outra fala na rádio, mencionando 'vítima confirmada' e 'local isolado'. A palavra 'homicídio' não é dita, mas paira no ar úmido, mais pesada que o cheiro de sangue.\n\nMinhas pernas cedem. Alguém me guia até o sofá e me oferece uma garrafa de água. Bebo sem perceber, o líquido morno e metálico na língua.\n\nDaniel está sentado na cadeira da cabeceira. As mãos dele ainda estão manchadas. Ele olha para elas como se pertencessem a outra pessoa.\n\n— Qual o seu nome?\n\nO policial mais velho está na minha frente. Respondo com um nome que soa estranho na própria boca. Pergunta-me onde estive nas últimas três horas. Conto sobre o evento no Fasano, os nomes dos clientes, o táxi. Ele anota sem pressa.\n\nUma terceira figura entra. Terno escuro, guarda-chuva na mão, cabelo grisalho cortado curto. Não usa uniforme.\n\n— Delegado Ribeiro — anuncia um dos policiais.\n\nRibeiro aproxima-se de Helena. Não toca nela. Observa a posição do corpo, o lenço, as mãos. Tira uma foto com o celular pessoal. Depois vira-se para nós.\n\n— Ninguém toca em nada — diz, e pela primeira vez a noite parece ter uma ordem. — A perícia está a caminho. Até lá, vocês dois fiquem aqui. Separados.\n\nUm policial conduz-me para a cozinha. A porta entreaberta separa-me de Daniel.",
+      "choices": [
+        {
+          "id": "choice_ch2_to_kitchen",
+          "label": "Ir para a cozinha e aguardar as instruções da perícia, focando nos detalhes ao redor.",
+          "nextNodeId": "node_ch2_kitchen_interrogation"
+        }
+      ]
+    },
+    "node_ch2_kitchen_interrogation": {
+      "id": "node_ch2_kitchen_interrogation",
+      "text": "A cozinha está escura. Acendo a luz sobre a ilha de mármore. O policial que me acompanhou fica na porta, de costas para mim. Ouço vozes abafadas da sala. Ribeiro perguntou algo, Daniel respondeu em tom baixo.\n\nMinhas pernos tremem. Meus olhos percorrem a cozinha: a cafeteira elétrica indica que o café foi feito há horas. Na escorregadora da pia, há duas xícaras usadas recentemente — a minha e uma branca, de visitas, embora eu não me lembre de ter recebido ninguém. A porta da despensa está meio aberta e, na prateleira das especiarias, uma chave desconhecida brilha sobre o frasco de açafrão.\n\nA porta abre-se e o Delegado Ribeiro entra sozinho, fechando-a atrás de si.\n\n— Sente-se, por favor — diz ele. Sento-me no banquinho alto. Ele fica do outro lado da ilha. — Sua versão. Do início. O que viu, o que fez, o que sabe.\n\nComeço a falar. O evento, o táxi, a árvore caída, a porta entreaberta. Quando menciono que Daniel não respondeu minhas mensagens, ele pergunta quantas. Depois indaga sobre a presença de Helena.\n\nPor fim, Ribeiro fecha o caderno e revela:\n\n— Seu marido disse que voltou da obra na Vila Madalena porque esqueceu o carregador do notebook. Que precisava de um arquivo para enviar pela manhã. Você confirma que ele tem esse hábito de voltar no meio da noite por esquecimentos?\n\nPenso nas vezes em que voltamos para buscar plantas, mas nunca no meio de uma noite chuvosa por um carregador.\n\n— Ele... já fez coisas assim — respondo, escolhendo cada palavra. — Mas não posso confirmar esta noite. Não estava aqui.\n\nRibeiro assente e sai. Fico sozinha na cozinha. A cafeteira pisca vermelha. A chave na despensa brilha. Do outro lado da parede, Daniel está em algum lugar que não consigo alcançar.",
+      "choices": [
+        {
+          "id": "choice_ch2_talk_daniel",
+          "label": "Insistir em falar com Daniel antes que a perícia chegue para comparar versões e entender o que ele disse a Ribeiro.",
+          "nextNodeId": "node_ch2_route_a",
+          "statChanges": {
+            "confianca_daniel": 5,
+            "relacao_policia": -5
+          }
+        },
+        {
+          "id": "choice_ch2_examine_kitchen",
+          "label": "Examinar a cozinha discretamente enquanto o policial na porta não olha, investigando a chave desconhecida na despensa.",
+          "nextNodeId": "node_ch2_route_b",
+          "statChanges": {
+            "rigor_investigacao": 10
+          },
+          "addEvidence": [
+            "chave_desconhecida_despensa",
+            "xicaras_cafe_extras"
+          ]
+        },
+        {
+          "id": "choice_ch2_call_contact",
+          "label": "Pedir para ligar para alguém de confiança — um advogado ou familiar — para pensar com clareza por mim.",
+          "nextNodeId": "node_ch2_route_c",
+          "statChanges": {
+            "relacao_policia": 5
+          }
+        },
+        {
+          "id": "choice_ch2_observe_ribeiro",
+          "label": "Ficar onde estou e observar Ribeiro através da vidro da cozinha, analisando seu método de investigação e comportamento com Daniel.",
+          "nextNodeId": "node_ch2_route_d",
+          "statChanges": {
+            "relacao_policia": 10
+          }
+        }
+      ]
+    },
+    "node_ch2_route_a": {
+      "id": "node_ch2_route_a",
+      "text": "Você exige ver Daniel, cruzando o corredor sob o olhar reprovador do policial. Ao encontrar o olhar de Daniel, percebe a tensão latente entre o que ele disse à polícia e o que está escondendo de você.",
+      "choices": [
+        {
+          "id": "to_ch3_a",
+          "label": "Avançar para o Capítulo 3...",
+          "nextNodeId": "node_ch3_start"
+        }
+      ]
+    },
+    "node_ch2_route_b": {
+      "id": "node_ch2_route_b",
+      "text": "Com movimentos rápidos e silenciosos, você apanha a chave metálica na despensa e esconde-la no bolso do vestido. A prova física está guardada, longe dos olhos da perícia que se aproxima.",
+      "choices": [
+        {
+          "id": "to_ch3_b",
+          "label": "Avançar para o Capítulo 3...",
+          "nextNodeId": "node_ch3_start"
+        }
+      ]
+    },
+    "node_ch2_route_c": {
+      "id": "node_ch2_route_c",
+      "text": "Você solicita o uso do telefone para acionar assessoria jurídica e apoio externo, garantindo que os seus direitos e os de Daniel sejam resguardados antes que o interrogatório formal avance na delegacia.",
+      "choices": [
+        {
+          "id": "to_ch3_c",
+          "label": "Avançar para o Capítulo 3...",
+          "nextNodeId": "node_ch3_start"
+        }
+      ]
+    },
+    "node_ch2_route_d": {
+      "id": "node_ch2_route_d",
+      "text": "Através do vidro, você mapeia cada gesto de Ribeiro, as perguntas cirúrgicas e o modo como ele manuseia o bloco de notas. Esse conhecimento do adversário será vital para os próximos passos.",
+      "choices": [
+        {
+          "id": "to_ch3_d",
+          "label": "Avançar para o Capítulo 3...",
+          "nextNodeId": "node_ch3_start"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

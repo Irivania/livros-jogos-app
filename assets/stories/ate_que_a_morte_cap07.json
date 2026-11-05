@@ -1,0 +1,110 @@
+{
+  "nodes": {
+    "node_ch7_start": {
+      "id": "node_ch7_start",
+      "text": "A escavação do passado trouxe à tona verdades devastadoras: o acidente de carro de há três anos não foi um mero atropelamento de animal, mas sim um evento traumático encoberto por amnésia dissociativa. Enquanto o vídeo de Helena e os arquivos da Lumen Design revelam contradições gritantes entre a versão de Daniel e o áudio da sua melhor amiga — apontando quem realmente estava ao volante —, a linha entre vítima, manipuladora e culpada dissolve-se.\n\nAgora, com testemunhas do acidente a surgir e o cerco policial a apertar-se, a decisão que tomar define o destino final de toda a verdade.",
+      "choices": [
+        {
+          "id": "choice_ch7_police_station",
+          "label": "Apresentar-se à delegacia e confrontar a testemunha oficial do acidente perante o Delegado Ribeiro.",
+          "nextNodeId": "node_ch7_route_a",
+          "statChanges": {
+            "relacao_policia": 15
+          },
+          "addEvidence": [
+            "depoimento_testemunha_acidente"
+          ]
+        },
+        {
+          "id": "choice_ch7_confront_daniel",
+          "label": "Procurar Daniel em busca de respostas definitivas sobre quem realmente conduzia o veículo no dia do acidente.",
+          "nextNodeId": "node_ch7_route_b",
+          "statChanges": {
+            "confianca_daniel": -10
+          },
+          "addEvidence": [
+            "confronto_passado_daniel"
+          ]
+        },
+        {
+          "id": "choice_ch7_call_beatriz",
+          "label": "Ligar para a advogada Beatriz para ativar a protecção legal e negociar a imunidade antes de qualquer depoimento.",
+          "nextNodeId": "node_ch7_route_c",
+          "statChanges": {
+            "rigor_investigacao": 10
+          },
+          "addEvidence": [
+            "estrategia_legal_beatriz"
+          ]
+        },
+        {
+          "id": "choice_ch7_return_marcos",
+          "label": "Voltar ocultamente ao apartamento de Marcos para vasculhar novas pistas antes que a perícia forense encerre o local.",
+          "nextNodeId": "node_ch7_route_d",
+          "statChanges": {
+            "rigor_investigacao": 15
+          },
+          "addEvidence": [
+            "busca_clandestina_apartamento_marcos"
+          ]
+        }
+      ]
+    },
+    "node_ch7_route_a": {
+      "id": "node_ch7_route_a",
+      "text": "Na sala de interrogatório da delegacia, o Delegado Ribeiro introduz a testemunha misteriosa. O véu do passado começa a cair.",
+      "choices": [
+        {
+          "id": "to_climax_act_a",
+          "label": "Avançar para o Capítulo 8...",
+          "nextNodeId": "node_ch8_start"
+        }
+      ]
+    },
+    "node_ch7_route_b": {
+      "id": "node_ch7_route_b",
+      "text": "Frente a frente com Daniel, as máscaras caem. As contradições entre o seu relato e as provas de Helena exigem uma confissão.",
+      "choices": [
+        {
+          "id": "to_climax_act_b",
+          "label": "Avançar para o Capítulo 8...",
+          "nextNodeId": "node_ch8_start"
+        }
+      ]
+    },
+    "node_ch7_route_c": {
+      "id": "node_ch7_route_c",
+      "text": "Sob a orientação firme de Beatriz, os contornos jurídicos são traçados para proteger a sua liberdade contra acusações premeditadas.",
+      "choices": [
+        {
+          "id": "to_climax_act_c",
+          "label": "Avançar para o Capítulo 8...",
+          "nextNodeId": "node_ch8_start"
+        }
+      ]
+    },
+    "node_ch7_route_d": {
+      "id": "node_ch7_route_d",
+      "text": "Entre os lírios e o cheiro a uísque do apartamento de Marcos, você descobre a última evidência física escondida no cofre de parede.",
+      "choices": [
+        {
+          "id": "to_climax_act_d",
+          "label": "Avançar para o Capítulo 8...",
+          "nextNodeId": "node_ch8_start"
+        }
+      ]
+    },
+    "node_ch8_start": {
+      "id": "node_ch8_start",
+      "text": "O cerco final está completo. Todas as verdades ocultas convergem para o desfecho definitivo em Perdizes.",
+      "choices": [
+        {
+          "id": "ch8_next_node",
+          "label": "Prosseguir para o início do Capítulo 8...",
+          "nextNodeId": "node_ch8_scene_start"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

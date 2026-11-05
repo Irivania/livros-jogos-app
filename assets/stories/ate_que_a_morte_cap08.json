@@ -1,0 +1,110 @@
+{
+  "nodes": {
+    "node_ch8_start": {
+      "id": "node_ch8_start",
+      "text": "A desintegração de todas as certezas está completa. O mistério do acidente de há três anos encontrou a sua face e o seu nome: Juliana Costa, estudante de medicina de 22 anos, cujo corpo jaz escondido no poço abandonado da obra da Vila Madalena.\n\nA confissão de Daniel, o testemunho implacável de Dona Célia, o pen drive com o vídeo de vigilância e as cartas guardadas por Marcos revelam que Helena tentava proteger a verdade e salvar-lhe a vida, pagando o preço máximo por isso. Com a polícia a preparar a escavação oficial e o cerco a fechar-se, a sua decisão final moldará o ajuste de contas definitivo.",
+      "choices": [
+        {
+          "id": "choice_ch8_go_alone",
+          "label": "Ir sozinha ao poço abandonado da obra na Vila Madalena para confrontar a verdade física de frente, sem intermediários.",
+          "nextNodeId": "node_ch8_route_a",
+          "statChanges": {
+            "rigor_investigacao": 20
+          },
+          "addEvidence": [
+            "confronto_solitario_poco"
+          ]
+        },
+        {
+          "id": "choice_ch8_wait_beatriz",
+          "label": "Esperar pela advogada Beatriz para coordenar a escavação legal com mandado judicial e salvaguardar a imunidade.",
+          "nextNodeId": "node_ch8_route_b",
+          "statChanges": {
+            "relacao_policia": 10
+          },
+          "addEvidence": [
+            "escavacao_juridica_protegida"
+          ]
+        },
+        {
+          "id": "choice_ch8_meet_daniel",
+          "label": "Encontrar Daniel na obra da Vila Madalena para ouvi-lo até ao fim e decidir se ele é um homem em redenção ou um perigo vivo.",
+          "nextNodeId": "node_ch8_route_c",
+          "statChanges": {
+            "confianca_daniel": -30
+          },
+          "addEvidence": [
+            "encontro_final_daniel_obra"
+          ]
+        },
+        {
+          "id": "choice_ch8_give_to_ribeiro",
+          "label": "Entregar todas as evidências (pen drive, vídeos, bilhetes) formalmente ao Delegado Ribeiro e delegar a justiça à lei.",
+          "nextNodeId": "node_ch8_route_d",
+          "statChanges": {
+            "relacao_policia": 20
+          },
+          "addEvidence": [
+            "entrega_total_provas_ribeiro"
+          ]
+        }
+      ]
+    },
+    "node_ch8_route_a": {
+      "id": "node_ch8_route_a",
+      "text": "Sob a penumbra da obra abandonada, você desce em direção ao poço escuro. O eco dos seus passos é a única companhia enquanto o passado ressurge.",
+      "choices": [
+        {
+          "id": "to_final_resolution_a",
+          "label": "Avançar para o Capítulo 9...",
+          "nextNodeId": "node_ch9_start"
+        }
+      ]
+    },
+    "node_ch8_route_b": {
+      "id": "node_ch8_route_b",
+      "text": "Com Beatriz ao seu lado, as barreiras legais erguem-se enquanto os peritos iniciam os trabalhos formais de busca no local indicado.",
+      "choices": [
+        {
+          "id": "to_final_resolution_b",
+          "label": "Avançar para o Capítulo 9...",
+          "nextNodeId": "node_ch9_start"
+        }
+      ]
+    },
+    "node_ch8_route_c": {
+      "id": "node_ch8_route_c",
+      "text": "Encostado ao betão frio do poço, Daniel aguarda-a. A confissão final está prestes a ser proferida perante os escombros de tudo o que construíram.",
+      "choices": [
+        {
+          "id": "to_final_resolution_c",
+          "label": "Avançar para o Capítulo 9...",
+          "nextNodeId": "node_ch9_start"
+        }
+      ]
+    },
+    "node_ch8_route_d": {
+      "id": "node_ch8_route_d",
+      "text": "A operação policial liderada por Ribeiro cerca o perímetro da obra. As provas contundentes garantem que a verdade institucional venha finalmente à tona.",
+      "choices": [
+        {
+          "id": "to_final_resolution_d",
+          "label": "Avançar para o Capítulo 9...",
+          "nextNodeId": "node_ch9_start"
+        }
+      ]
+    },
+    "node_ch9_start": {
+      "id": "node_ch9_start",
+      "text": "O ciclo fecha-se. O mistério que começou com um lenço de seda azul-marinho e uma porta entreaberta em Perdizes encontra Perdizes na sua luz mais crua e definitiva.",
+      "choices": [
+        {
+          "id": "final_epilogue_node",
+          "label": "Concluir a história...",
+          "nextNodeId": "node_ch9_epilogue"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}

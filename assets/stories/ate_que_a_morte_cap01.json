@@ -1,0 +1,105 @@
+{
+  "nodes": {
+    "node_ch1_start": {
+      "id": "node_ch1_start",
+      "text": "O táxi para na esquina da rua porque a árvore caída bloqueia o acesso. A tempestade ainda cai fina, mas a pior parte já passou — o tipo de temporal de verão que despeja o céu em vinte minutos e desaparece, deixando a cidade encantada e estranha.\n\nPago a corrida e caminho os últimos quarenta metros. Meus saltos altos ecoam na calçada molhada. Ainda estou de vestido de gala, o casaco de seda colado nos ombros, o convite do evento na bolsa. O lançamento do projeto no hotel Fasano foi um sucesso. Clientes novos, elogios, duas taças de espumante que não bebi por completo. Daniel não respondeu minhas mensagens durante a noite, mas isso não é incomum quando ele está em obra — sinal fraco, bateria, distração.\n\nA porta da frente está entreaberta.\n\nNão deveria estar. Daniel tem mania de trancar tudo, especialmente depois da série de assaltos no bairro mês passado. Empurro a madeira encharcada com a ponta do pé.\n\n— Daniel?\n\nA luz da entrada está acesa. Deixo a bolsa no aparador e avanço pelo corredor. O ar tem um cheiro que não reconheço imediatamente — algo metálico, úmido, que não combina com o eucalipto do difusor que deixei ligado.\n\nA sala de estar está à minha frente. A porta de correr de vidro que dá para o jardim está aberta, balançando levemente com a brisa pós-temporal. Gotas de chuva escorrem pelo parapeito.\n\nEla está no chão.\n\nHelena.\n\nDe bruços, os cabelos escuros espalhados sobre o tapete persa que escolhemos juntas há dois anos. O vestido azul-marinho que favorece tanto. Os braços em ângulo estranho. E o lenço — meu lenço de seda, o que ganhei de aniversário de Daniel — enfiado em volta do pescoço, apertado em um nó que não sei fazer.\n\nNão consigo respirar direito. Não consigo gritar.\n\nDaniel está ajoelhado ao lado dela.\n\nAs mãos dele estão vermelhas. Ensanguentadas. Ele olha para mim com uma expressão que não consigo decifrar — não é culpa, não é medo. É algo mais antigo, mais profundo, como se estivesse me vendo de um lugar muito distante.\n\n— Eu não fiz isto — diz ele. A voz não treme. — Você precisa acreditar em mim.\n\nNão respondo. Não consigo. Meus olhos percorrem a sala: a mesa de centro virada, o vaso de cerâmica quebrado no canto, as marcas de água no piso de madeira que indicam luta, movimento, algo que aconteceu antes de eu chegar. Meu olhar de arquiteta nota detalhes que meu cérebro recusa processar: o tapete deslocado quarenta centímetros para a esquerda, a posição do corpo em relação à porta de vidro, a ausência de sinais de arrombamento.\n\n— O que você está fazendo aqui? — finalmente consigo perguntar. — Você disse que estava na Vila Madalena.\n\n— Eu estava. Voltei porque... — ele para. Olha para as próprias mãos. — Encontrei-a assim. Já estava assim quando cheguei.\n\nA distância entre nós parece de quilômetros. Quero ir até ele, abraçá-lo, acreditar. Mas algo em mim — algo que não sabia que existia — me mantém parada na entrada da sala, calculando ângulos, memorizando posições, registrando o que está errado antes que alguém apague ou mude.\n\nA luz do celular de Helena pisca sob a mesa de centro. A tela acende com uma notificação que não consigo ler daqui.\n\nFora, ouço sirenes ao longe. Alguém chamou a polícia. Ou o alarme de algum vizinho disparou. Ou Daniel ligou antes de eu chegar.\n\n— Você ligou para a polícia? — questiono.\n\nEle nega com a cabeça, lento.\n\n— Não. Você chegou primeiro.\n\nAs sirenes ficam mais altas. Daniel não se move. Continua ajoelhado ao lado do corpo da minha melhor amiga, as mãos cobertas de sangue que ele diz não ter derramado, e eu tenho que decidir — agora, neste segundo — o que fazer com a distância entre nós.",
+      "choices": [
+        {
+          "id": "choice_ch1_a",
+          "label": "Aproximar-me de Daniel, ajoelhar-me ao lado dele e questionar o que aconteceu, tentando ler seus olhos. A confiança entre nós é maior do que qualquer circunstância.",
+          "nextNodeId": "node_ch1_route_a",
+          "statChanges": {
+            "confianca_daniel": 15,
+            "integridade_cena": -5
+          },
+          "addEvidence": ["alinhamento_emocional_daniel"]
+        },
+        {
+          "id": "choice_ch1_b",
+          "label": "Ficar onde estou, mantendo distância. Observar a sala, memorizar cada detalhe visível antes que a polícia chegue. Se ele for inocente, as provas o mostrarão.",
+          "nextNodeId": "node_ch1_route_b",
+          "statChanges": {
+            "rigor_investigacao": 10
+          },
+          "addEvidence": ["posicao_corpo_tapete_deslocado", "ausencia_sinais_arrombamento"]
+        },
+        {
+          "id": "choice_ch1_c",
+          "label": "Gritar por ajuda, correr até o celular de Helena para ver a notificação, ignorando a ocorrência de Daniel. Preciso de informação, não de explicação.",
+          "nextNodeId": "node_ch1_route_c",
+          "statChanges": {
+            "confianca_daniel": -10,
+            "integridade_cena": -20,
+            "relacao_policia": 5
+          },
+          "addEvidence": ["notificacao_celular_helena"]
+        },
+        {
+          "id": "choice_ch1_d",
+          "label": "Perguntar a Daniel por que Helena estaria em nossa casa, nesta noite, sozinha. A porta entreaberta, a luta, o lenço — nada disso faz sentido se ela simplesmente apareceu aqui.",
+          "nextNodeId": "node_ch1_route_d",
+          "statChanges": {
+            "confianca_daniel": 5
+          },
+          "addEvidence": ["questionamento_presenca_helena"]
+        }
+      ]
+    },
+    "node_ch1_route_a": {
+      "id": "node_ch1_route_a",
+      "text": "Você aproxima-se de passos firmes, ignorando o frio do piso, e ajoelha-se ao lado de Daniel. As mãos dele tremem quando você as toca. Ele murmura desculpas sem nexo, buscando o seu olhar. No entanto, o peso do corpo de Helena logo ali ao lado e o cheiro denso de ferro pairando no ar tornam o abraço sufocante. Antes que possam trocar mais palavras, as luzes vermelhas de uma viatura refletem-se no teto da sala.",
+      "choices": [
+        {
+          "id": "to_ch2",
+          "label": "Encarar a porta da entrada enquanto os agentes arrombam o perímetro.",
+          "nextNodeId": "node_ch2_start"
+        }
+      ]
+    },
+    "node_ch1_route_b": {
+      "id": "node_ch1_route_b",
+      "text": "Seus olhos absorvem cada detalhe: a inclinação exata da mesa de centro, o tapete deslocado por um forcejo físico, o vidro estilhaçado e o modo como o lenço de seda de Daniel foi atado com precisão mortal ao pescoço de Helena. Quando as sirenes estacionam na porta, sua mente arquiteta o cenário com precisão cirúrgica.",
+      "choices": [
+        {
+          "id": "to_ch2",
+          "label": "Preparar-se para a chegada inevitável da polícia.",
+          "nextNodeId": "node_ch2_start"
+        }
+      ]
+    },
+    "node_ch1_route_c": {
+      "id": "node_ch1_route_c",
+      "text": "Você desvia de Daniel num impulso seco e avança até a mesinha de centro. Seus dedos tocam o visor do celular de Helena bem no momento em que a notificação se apaga. A pressa altera o posicionamento dos objetos ao redor, mas a informação brilha na sua mente antes que o aparelho seja apreendido.",
+      "choices": [
+        {
+          "id": "to_ch2",
+          "label": "Ouvir as vozes autoritárias da polícia invadindo o corredor.",
+          "nextNodeId": "node_ch2_start"
+        }
+      ]
+    },
+    "node_ch1_route_d": {
+      "id": "node_ch1_route_d",
+      "text": "— O que ela estava a fazer aqui, Daniel? — a sua voz corta o ambiente com frieza calculada. Daniel engole em seco, o olhar piscando em confusão. \n— Ela... ela disse que precisava de falar comigo sobre a Lumen Design antes de ti... — a resposta dele é interrompida pelo som estridente de pancadas na porta.",
+      "choices": [
+        {
+          "id": "to_ch2",
+          "label": "Voltar-se para a entrada com a nova interrogação na mente.",
+          "nextNodeId": "node_ch2_start"
+        }
+      ]
+    },
+    "node_ch2_start": {
+      "id": "node_ch2_start",
+      "text": "As portas da cobertura abrem-se com um estrondo metálico. O Delegado Ribeiro avança pelo corredor com botas pesadas, acompanhado por dois peritos forenses. O olhar dele pousa imediatamente em Daniel, depois em si, vestida de gala no meio de um cenário de horror.",
+      "choices": [
+        {
+          "id": "ch2_next_node",
+          "label": "Avançar para o Capítulo 2...",
+          "nextNodeId": "node_ch2_kitchen_interrogation"
+        }
+      ]
+    }
+  },
+  "endings": {}
+}
